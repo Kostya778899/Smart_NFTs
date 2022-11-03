@@ -13,10 +13,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 //@Preview(showBackground = true)
 @Composable
@@ -53,9 +56,11 @@ fun RegisterWindow(
                         .fillMaxWidth()
                         .background(Color.LightGray)
                         .border(2.dp, Color.DarkGray)
-                        .padding(5.dp)
+                        .padding(5.dp),
+                    textStyle = TextStyle(fontSize = 20.sp)
                 ) {
-                    if (name.text.isEmpty()) {
+                    it()
+                    if (value.text.isEmpty()) {
                         Text(title, fontSize = 20.sp)
                     }
                 }
@@ -76,7 +81,12 @@ fun RegisterWindow(
         Button(
             onClick = {
                 if (name.text.isEmpty() || email.text.isEmpty()) return@Button
-                onRegistered(User("", name.text, email.text))
+
+                val database = FirebaseDatabase.getInstance().getReference("User")
+                val user = User(database.key!!, name.text, email.text)
+                database.push().setValue(user)
+
+                onRegistered(user)
             },
             modifier = Modifier.width(250.dp),
             colors = ButtonDefaults.buttonColors(
