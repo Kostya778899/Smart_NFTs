@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "78123161483-u61fdt7shmjn1c8qv2ib8hppv7s9l6b0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kostyhub.smartnfts",
+            "certificate_hash": "215d2b8c93e7189fd8083d4a2e534ca855adfaeb"
+          }
+        },
+        {
           "client_id": "78123161483-18508obt2lqod8q2ep4c4p6l8jpb4rdu.apps.googleusercontent.com",
           "client_type": 3
         }
