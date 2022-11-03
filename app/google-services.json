@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "78123161483",
+    "firebase_url": "https://smart-nfts-30a50-default-rtdb.firebaseio.com",
+    "project_id": "smart-nfts-30a50",
+    "storage_bucket": "smart-nfts-30a50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78123161483:android:e02f19909402bc8549c18e",
+        "android_client_info": {
+          "package_name": "com.kostyhub.smartnfts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78123161483-18508obt2lqod8q2ep4c4p6l8jpb4rdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTci_sRtpqQlWnD689Ewn0fnvtUOgy8J4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78123161483-18508obt2lqod8q2ep4c4p6l8jpb4rdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
