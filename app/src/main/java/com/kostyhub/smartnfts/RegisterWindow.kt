@@ -36,51 +36,32 @@ fun RegisterWindow(
         var name by remember { mutableStateOf(TextFieldValue()) }
         var email by remember { mutableStateOf(TextFieldValue()) }
 
-        Column(
+
+        PhoneAuthentication_01()
+
+        /*Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
                 .padding(horizontal = 20.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            @Composable
-            fun TextField(
-                value: TextFieldValue,
-                onValueChange: (TextFieldValue) -> Unit,
-                title: String
-            ) {
-                BasicTextField(
-                    value = value,
-                    onValueChange = onValueChange,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(Color.LightGray)
-                        .border(2.dp, Color.DarkGray)
-                        .padding(5.dp),
-                    textStyle = TextStyle(fontSize = 20.sp)
-                ) {
-                    it()
-                    if (value.text.isEmpty()) {
-                        Text(title, fontSize = 20.sp)
-                    }
-                }
-            }
-
-            TextField(
+            TextField_00(
                 value = name,
                 onValueChange = { name = it },
                 title = "Name"
             )
-            TextField(
+            TextField_00(
                 value = email,
                 onValueChange = { email = it },
                 title = "Email"
             )
         }
         Spacer(modifier = Modifier.height(15.dp))
-        Button(
+
+        Button_00(
             onClick = {
-                if (name.text.isEmpty() || email.text.isEmpty()) return@Button
+                if (name.text.isEmpty() || email.text.isEmpty()) return@Button_00
 
                 val database = FirebaseDatabase.getInstance().getReference("User")
                 val user = User(database.key!!, name.text, email.text)
@@ -88,13 +69,7 @@ fun RegisterWindow(
 
                 onRegistered(user)
             },
-            modifier = Modifier.width(250.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Cyan,
-                contentColor = Color.Black
-            )
-        ) {
-            Text("Continue", fontSize = 25.sp)
-        }
+            title = "Continue"
+        )*/
     }
 }
